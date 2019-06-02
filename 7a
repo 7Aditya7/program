@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class student
+{
+public:
+void setdata(int a,int b)
+{
+rollno=a;
+marks=b;
+}
+void showdata(int a,int b)
+{
+cout<<"The Roll no of the studentn is: "<<rollno<<endl<<"The marks is: "<<marks;
+}
+};
+int main()
+{
+    student obj1;
+    obj1.setdata(12,34);
+    obj1.showdata();
+    return 0;
+}
