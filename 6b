@@ -1,0 +1,23 @@
+//Wap to find the leanth of a string without using array inbuilkt functions.
+#include<iostream>
+void find_length(char a[]);
+using namespace std;
+int main()
+{
+    char s[50];
+    cout<<"Enter a string"<<endl;
+    cin.getline(s,50);
+    find_length(s);
+    return 0;
+}
+void find_length(char a[])
+{
+    int i=0;
+    int num_of_character=0;
+    while(a[i]!='\0')
+    {
+    num_of_character++;
+    i++;
+    }
+    cout<<"Length of string="<<num_of_character<<endl;
+}
