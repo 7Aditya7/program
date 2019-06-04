@@ -1,0 +1,11 @@
+//by using length() function of string class.
+#include<iostream>
+using namespace std;
+int main()
+{
+string s1;
+cout<<"Enter a string"<<endl;
+getline(cin,s1);
+cout<<"Length of the string="<<s1.leangth();
+return 0;
+}
