@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+copy_it(char a[],char b[])
+{
+int i=0;
+while(b[i]!='\0')
+{
+a[i]=b[i];
+i++;
+}
+cout<<"Orginal string:"<<b;
+cout<<"Copied string:"<<a<<endl;
+}
+int main()
+{
+char str1[50];
+char str2[50];
+cout<<"Enter a string "<<endl;
+cin.getline(str1,50);
+copy_it(str2,str1);
+return 0;
+}
