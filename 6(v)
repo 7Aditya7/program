@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+char r[50]="Aditya";
+char s[50];
+int i=0,j=0,length=0;
+while(r[i]!='\0')
+{
+length++;
+i++;
+}
+i=length-1;
+for(j=0;j<length;j++,i--)
+{
+r[j]=s[i];
+}
+r[j]='\0';
+cout<<"Orginal string:"<<r<<endl;
+cout<<"Reversed string:"<<s;
+}
