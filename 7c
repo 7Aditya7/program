@@ -1,0 +1,25 @@
+//wap to show two ways of defining member functions in c++
+#include<iostream>
+using namespace std;
+class student
+{
+public:
+    int roll_no,marks;
+void setdata(int a,int b)
+{
+ roll_no=a;
+marks=b;
+}
+void showdata();
+};
+void student:: showdata()
+{
+cout<<"The Roll no of the student is: "<<roll_no<<endl<<"The marks is: "<<marks;
+}
+int main()
+{
+    student obj1;
+    obj1.setdata(12,34);
+    obj1.showdata();
+    return 0;
+}
