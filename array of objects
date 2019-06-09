@@ -1,0 +1,38 @@
+//array of objects
+#include<iostream>
+using namespace std;
+class employee{
+private:
+    int emp_id;
+    char name[50];
+    float salary;
+public:
+    void getdata();
+    void showdata();
+};
+void employee::getdata()
+{
+
+cout<<"Enter empid,name and salary"<<endl;
+cin>>emp_id>>name>>salary;
+
+}
+void employee::showdata()
+{
+    cout<<"Employee id="<<emp_id<<endl;
+    cout<<"Employee Name="<<name<<endl;
+    cout<<"Employee salary="<<salary<<endl;
+}
+int main()
+{
+    int i;
+    employee e[5];
+    for(i=0;i<3;i++)
+    {
+        e[i].getdata();
+    }
+        for(i=0;i<3;i++)
+    {
+        e[i].showdata();
+    }
+}
