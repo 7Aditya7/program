@@ -1,0 +1,35 @@
+//wap to demonstrate private and public access specifiers
+#include<iostream>
+using namespace std;
+class Test {
+ int a;
+private:
+
+    void print()
+    {
+        cout<<"a="<<a<<endl;
+
+    }
+public:
+    void getvalue()
+    {
+        cout<<"Enter a number";
+        cin>>a;
+    }
+    void cube()
+    {
+        print();
+        cout<<"cube="<<a*a*a<<endl;
+    }
+};
+int main()
+{
+    Test t1,t2;
+    t1.getvalue();
+    t2.getvalue();
+    //cout<<t1.a; //invalid
+    //t1.print(); //invalid
+    t1.cube();
+    t2.cube();
+    return 0;
+}
