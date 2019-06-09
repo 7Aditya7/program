@@ -1,16 +1,19 @@
+//WAP having a class called 'student' with two data members 'roll_no' and marks including two member functions setvalue() and getvalue() for setting and displaying the value of data members call these functions from main() by creating two objects of class.
+
 #include<iostream>
 using namespace std;
 class student
 {
 public:
+    int roll_no,marks;
 void setdata(int a,int b)
 {
-rollno=a;
+ roll_no=a;
 marks=b;
 }
-void showdata(int a,int b)
+void showdata()
 {
-cout<<"The Roll no of the studentn is: "<<rollno<<endl<<"The marks is: "<<marks;
+cout<<"The Roll no of the student is: "<<roll_no<<endl<<"The marks is: "<<marks;
 }
 };
 int main()
