@@ -1,0 +1,41 @@
+//9(a)returning objects from functions
+//return by value
+
+#include<iostream>
+using namespace std;
+class complex
+{
+private:
+ int real,img;
+ public:
+ void getdata(int a,int b)
+ {
+ real=a;
+ img=b;
+
+ }
+ void display()
+ {
+ cout<<real<<"+"<<img<<"i ";
+ }
+ complex add(complex c)
+ {
+ complex result;
+ result.real=real+c.real;
+ result.img=img+c.img;
+ return result;
+ }
+};
+int main()
+{
+complex c1,c2,c3;
+c1.getdata(12,4);
+c2.getdata(12,4);
+c3=c2.add(c1);
+cout<<endl<<" The complex number are "<<endl;
+c1.display();
+cout<<" + ";
+c2.display();
+cout<<"=";
+c3.display();
+}
