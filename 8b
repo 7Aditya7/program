@@ -1,0 +1,36 @@
+//8(b) WAP having a class 'Money' which has two data members 'rupee' and 'Paisa'.The clan has two member functions setmoney() display() to set and display data member values. Create a function called sum() which takes two objests of money. class and finds their sum. Call the functions from main by creating required objects,[setmoney() shouldd take value user]
+
+#include<iostream>
+using namespace std;
+class money
+{
+private:
+int rupee,paisa;
+public:
+void setmoney()
+{
+cout<<"Enter rupee and paisa"<<endl;
+cin>>rupee>>paisa;
+}
+void display()
+{
+cout<<rupee<<" rupee and "<< paisa <<" paisa ";
+}
+void sum(money t1,money t2)
+{
+rupee=t1.rupee+t2.rupee+(t1.paisa+t2.paisa)/100;
+paisa=(t1.paisa+t2.paisa)%100;
+}
+};
+int main()
+{
+money t1,t2,t3;
+t1.setmoney();
+t2.setmoney();
+t3.sum(t1,t2);
+t1.display();
+cout<<" + ";
+t2.display();
+cout<<" = ";
+t3.display();
+}
