@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class test{
+int a;
+public:
+void getdata(int x)
+{
+    a=x;
+}
+
+void showdata()
+{
+    cout<<a;
+}
+test *mul(test *c)
+{
+    test *result;
+    result->a=a*c->a;
+    return result;
+
+}
+
+};
+int main()
+{
+    test c1,c2,*c3;
+    c1.getdata(3);
+    c2.getdata(9);
+    //
+    cout<<"The example for return by pointer is:"<<endl;
+    c1.showdata();
+    cout<<"*";
+    c2.showdata();
+    cout<<"=";
+    c3=c2.mul(&c1);
+    c3->showdata();
+
+}
