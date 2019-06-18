@@ -1,0 +1,36 @@
+//lab 11b wap to demonstrate the concept of static  member function.
+#include<iostream>
+using namespace std;
+class student
+{
+private:
+static int count;//static data member
+int roll_no;
+char name[50];
+public:
+    void getdata()
+    {
+    cout<<"Enter roll no and name:"<<endl;
+    cin>>roll_no>>name;
+    count++;
+
+    }
+static void display()
+{
+    cout<<"count:"<<count<<endl;
+    //cout<<"roll_no"<<roll_no<<endl;//static member function cannot acess nonstatic data
+}
+};
+int student::count=0;
+
+//assignising valur to static data
+int main()
+{
+    student::display();//callting static member function using scope scope resolution
+    student s1,s2,s3;
+    s1.getdata();
+    s2.getdata();
+    s3.getdata();
+    s1.display();//calling static member function using dot operation
+
+}
