@@ -1,0 +1,35 @@
+//lab 11a wap to demonstrate the concept of static data member.
+#include<iostream>
+using namespace std;
+class student
+{
+private:
+static int count;//static data member
+int roll_no;
+char name[50];
+public:
+    void getdata()
+    {
+    cout<<"Enter roll no and name:"<<endl;
+    cin>>roll_no>>name;
+    count++;
+    }
+void display()
+{
+    cout<<"count:"<<count<<endl;
+}
+};
+int student::count=0;//assignising valur to static data
+int main()
+{
+    student s1,s2,s3;
+    s1.display();
+    s2.display();
+    s3.display();
+    s1.getdata();
+    s2.getdata();
+    s3.getdata();
+     s1.display();
+    s2.display();
+    s3.display();
+}
