@@ -1,0 +1,33 @@
+//wap to demonstrate constructor overloading
+#include<iostream>
+using namespace std;
+class test
+{
+    int a,b,c;
+    public:
+    test(int x)
+    {
+        a=x;
+    }
+    test(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void display1()
+    {
+        cout<<a<<endl;
+    }
+    void display2()
+    {
+        cout<<a<<" "<<b;
+    }
+
+};
+int main()
+{
+    test obj=12;
+    test obj1=test(12,12);
+    obj.display1();
+    obj1.display2();
+}
