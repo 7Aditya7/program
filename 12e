@@ -31,3 +31,4 @@ int main()
     obj.display1();
     obj1.display2();
 }
+\\wap to demonstrate constuctor with default argument\\
