@@ -6,12 +6,12 @@ private:
     int  num;
     char ch;
 public:
-    demo &setnum(int num)
+    demo setnum(int num)
     {
         this->num=num;
         return *this;
     }
-    demo &setch(char ch)
+    demo setch(char ch)
     {
         this->num++;
         this->ch=ch;
@@ -24,8 +24,8 @@ public:
 };
 int main()
 {
-    demo obj;
-    obj.setnum(100).setch('A');
-    obj.displaymyvalues();
+    demo obj,obj1;
+    obj1=obj.setnum(100).setch('X');
+    obj1.displaymyvalues();
 
 }
