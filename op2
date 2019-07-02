@@ -1,0 +1,37 @@
+//program to demonstrate postfix increment operator using member function
+#include<iostream>
+using namespace std;
+class demo
+{
+int i,j,k;
+public:
+demo(int a, int b, int c)
+{
+i=a;
+j=b;
+k=c;
+}
+void display()
+{
+cout<<"\ni="<<i<<"\nj="<<j<<"\nk="<<k<<endl;
+}
+
+void operator ++(int);
+};
+void demo::operator ++(int)
+{
+i++;
+j++;
+k++;
+}
+int main ()
+{
+demo d1= demo(10,20,30);
+cout<<"\nvalue of data member function before increment"<<endl;
+d1.display();
+d1++;
+cout<<"\naftr increment"<<endl;
+d1.display();
+
+return 0;
+}
