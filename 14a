@@ -1,0 +1,33 @@
+//wap to demonstrate postfix increment overloading using member function
+#include<iostream>
+using namespace std;
+class postfix
+{
+private:
+int i,j,k;
+public:
+    postfix(int a,int b,int c)
+    {
+        i=a;
+        j=b;
+        k=c;
+    }
+    void showdata()
+    {
+    cout<<i<<endl<<j<<endl<<k<<endl;
+    }
+    void operator ++(int )
+    {
+        i++;
+        j++;
+        k++;
+    }
+
+
+};
+int main()
+{
+    postfix o1(10,11,12);
+    o1++;
+    o1.showdata();
+}
