@@ -1,0 +1,30 @@
+//wap to demonstrate prefix operator using friend function overloading
+#include<iostream>
+using namespace std;
+class prefix
+{
+private:
+    int i,j;
+public:
+    prefix(int a,int b)
+    {
+        i=a;
+        j=b;
+    }
+    void showdata()
+    {
+        cout<<i<<endl<<j;
+    }
+    friend void operator ++(prefix &d);
+};
+void operator ++(prefix &d)
+{
+    ++d.i;
+    ++d.j;
+}
+int main()
+{
+    prefix o1(10,11);
+    ++o1;
+    o1.showdata();
+}
