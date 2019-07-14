@@ -1,0 +1,36 @@
+//16(a) demonstrate opeatorsn that return value
+//i using temporary object//do yourself//
+//ii using nameless object
+#include<iostream>
+using namespace std;
+class test
+{
+int x,y;
+public:
+test()
+{
+x=0;
+y=0;
+}
+test (int a,int b)
+{
+x=a;
+y=b;
+}
+void display()
+{
+    cout<<"x="<<x<<endl<<"y="<<y<<endl;
+}
+test operator --(){
+--x;
+--y;
+return test(x,y);
+}
+};
+int main()
+{
+test t1(20,25),t2;
+t1.display();
+t2=--t1;
+t2.display();
+}
