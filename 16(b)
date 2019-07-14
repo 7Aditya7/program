@@ -1,0 +1,38 @@
+//16(b|)---Binary operator overloading.
+#include<iostream>
+using namespace std;
+class Distance{
+int feet,inches;
+public:
+void getdata()
+{
+cout<<"Enter feet and inches"<<endl;
+cin>>feet>>inches;
+}
+void display()
+{
+    cout<<"Feet is="<<feet<<endl<<"Inches is="<<inches<<endl;
+}
+Distance operator +(Distance d)
+{
+Distance temp;
+temp.feet=feet + d.feet;
+temp.inches=inches+d.inches;
+temp.feet=d.feet+d.inches/12;
+temp.inches=d.inches%12;
+return temp;
+}
+};
+int main()
+{
+Distance d1,d2,d3;
+d1.getdata();
+d2.getdata();
+cout<<"Values is d1"<<endl;
+d1.display();
+cout<<"Values is d2"<<endl;
+d2.display();
+d3=d1+d2;
+cout<<"Values of d3"<<endl;
+d3.display();
+}
