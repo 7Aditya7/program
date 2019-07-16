@@ -1,0 +1,20 @@
+
+//(a)wap to overload <,> and == operator considering is class 'Money' having data member 'rupee' and 'paisa';
+
+#include<iostream>
+using namespace std;
+class Money{
+int rupee,paisa;
+public:
+void getdata()
+{
+    cout<<"Enter rupee and paisa"<<endl;
+    cin>>rupee>>paisa;
+}
+int operator <(Money m)
+{
+    int rupee,money;
+    
+}
+  
+
