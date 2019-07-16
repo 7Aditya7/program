@@ -1,0 +1,45 @@
+//lab 18 overloading assingmen operator
+/*Overloading Assignment operator
+-Assignment operator can be overloaded in c++
+- By overloading assignment operator , all values of one object can be copied to another object
+by using assignment operator
+-If the overloading function for assignment operator is not included in the class,
+the compiler generates the function to overload the assignment operator.
+-We need to write our own operator overloading function .
+when the class contains pointer or any run time allocation of resources in program.
+-Default overloading function for assignment operator created by compiler peroform shallow copy
+-User defined overloading function for assignment operator does deep copy.
+a) WAP to demonstrate default overloading function for assignment operator performing shallow copy.
+b) WAP to demonstrate user defined overloading funciton for assignment operator performing deep copy. */
+//CLASS without userdefined copy constructor
+#include <iostream>
+using namespace std;
+class test{
+int *ptr;
+public:
+    test(int i=0)
+    {
+        ptr = new int(i);
+    }
+    void setvalue(int i){
+    *ptr = i;
+    }
+    void operator =(test &t)
+    {
+        *ptr=*(t.ptr);
+    }
+    void print(){
+    cout<<"*ptr "<<*ptr<<endl;
+    }
+
+    };
+    int main(){
+    test t1(5);
+    test t2;
+    t2=t1;//default overloaded assignment operator
+    t1.setvalue(10);
+    t2.print();
+    return 0;
+    }
+
+
