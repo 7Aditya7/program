@@ -1,0 +1,32 @@
+//lab 18 Overloading insertion and extraction operator
+//-'cout' is object of 'ostream' class and 'cin' is object of 'istream' class
+//-To overload insertion and extraction operator we have to use global function And nif e want to allow them to access privete data member of class,We must make them friend
+#include<iostream>
+using namespace std;
+class student {
+char name[20];
+int sid;
+public:
+    friend void operator >>(istream &in, student &s);
+    friend void operator <<(ostream &out, student &s);
+};
+void operator >>(istream &in, student &s)
+{
+    cin.getline(s.name,20);
+    in>>s.sid;
+}
+void operator <<(ostream &out, student &s)
+{
+    out<<"Name:"<<s.name<<endl;
+    out<<"Id:"<<s.sid<<endl;
+}
+int main()
+{
+    student s1;
+
+    cout<<"Enter the student's name and id"<<endl;
+    cin>>s1;
+    cout<<"The information you how entered is:"<<endl;
+        cout<<s1;
+        return 0;
+}
