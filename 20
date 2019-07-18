@@ -1,0 +1,12 @@
+//Lab 20 wap to demonstrate type conversion from onw basic type to another basic type c use both implicit and explicit cobversion
+//b wap to demonstrate type conversion from basic type to user defined type.
+//c wap to demonstrate type conversion from user defined type to basic type
+//d wap to demonstrate type conversion from user defined type to another user derfined type 
+           //i conversion routine in source class
+           //ii conversion routine in destination class
+//e wap to convert currency from us dollar to NRs Consider two classes USD with data members 'dollar'& 'cent' and NRS with data members 'rupee' & 'paisa'/(Assume $1= rs 110)
+     
+     
+     #include<iostream>
+     using namespace std;
+     
