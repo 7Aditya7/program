@@ -1,0 +1,72 @@
+//Function overriding is a feature that allows  us to have same function in child class which is present in the parent class. a child class inherits the data members and member functions of parent class, but when we want to override functionality in the child class them we can use function overriding.
+//It is creating a new version of an ond function ,in the child class.
+//To override a function we must have the same signature in child class. It means the data type and sequence of parameter and number of parameter.
+//In function overriding function in parent class is called overridden function and function in child class is called overriding function.
+//If we want to call the overridden function function by using the object of child class, we have to create the child object in such a way  that reference of parent class points toit
+//obj.class_name::function_name
+
+//lab 22a wap to demonstrate function overriding
+
+#include<iostream>
+using namespace std;
+class Father{
+public:
+    void property()
+    {
+        cout<<"All of my properties will be given too omy child"<<endl;
+    }
+    void marriage()//overriding function
+    {
+        cout<<"Child should do arrange marriage."<<endl;
+    }
+    };
+    class child: public Father
+    {
+    public:
+        void marriage()
+    {
+        cout<<"Child should do love marriage."<<endl;
+    }
+    };
+    int main()
+    {
+        child obj;
+        obj.property();
+        obj.marriage();// child version
+        obj.Father::marriage();//parent version
+    }
+    
+    //lab 22b Wap considering a class named,'shape' having a member function'float area()' Now derive three classes ,'rectalge','triangle'. and \circle' from 'shape' classand override 'float area()' function in each clhild clasws.
+    
+    #include<iostream>
+using namespace std;
+class shape
+{
+
+public:
+    float area()
+    {
+        return 0;
+    }
+};
+class rectangle: public shape{
+    protected:
+
+int l=2,b=3;
+public:
+    float area()
+    {
+       float area=l*b;
+        return area;
+    }
+
+    };
+    int main()
+    {
+        rectangle obj;
+        float x=obj.area();
+        cout<<x;
+    }
+
+    
+
