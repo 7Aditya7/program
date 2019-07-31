@@ -1,4 +1,3 @@
-
 //(a)wap to overload <,> and == operator considering is class 'Money' having data member 'rupee' and 'paisa';
 
 #include<iostream>
@@ -13,8 +12,51 @@ void getdata()
 }
 int operator <(Money m)
 {
-    int rupee,money;
-    
+    int ft,st;
+    ft=rupee*100+paisa;
+    st=m.rupee*100+m.paisa;
+    if(ft<st)
+        return 1;
+        else
+        return 0;
 }
-  
+int operator >(Money m)
+{
+    int ft,st;
+    ft=rupee*100+paisa;
+    st=m.rupee*100+m.paisa;
+    if(ft>st)
+        return 1;
+        else
+        return 0;
 
+}
+int operator ==(Money m)
+{
+    int ft,st;
+    ft=rupee*100+paisa;
+    st=m.rupee*100+m.paisa;
+    if(ft==st)
+        return 1;
+        else
+        return 0;
+
+}
+};
+int main()
+{
+    Money m1,m2;
+    m1.getdata();
+    m2.getdata();
+  
+    if(m1<m2)
+        cout<<"M1 is lesser than m2"<<endl;
+
+    else if(m1>m2)
+        cout<<"M1 is greater than m2"<<endl;
+
+         else(m1==m2)
+        cout<<"M1 is equals to m2"<<endl;
+
+         cout<<endl<<"Name::Aditya Khadka"<<endl<<"Roll no::6";
+}
