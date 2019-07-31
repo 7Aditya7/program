@@ -1,4 +1,4 @@
-//lab 18 Overloading insertion and extraction operator
+//lab 19 Overloading insertion and extraction operator
 //-'cout' is object of 'ostream' class and 'cin' is object of 'istream' class
 //-To overload insertion and extraction operator we have to use global function And nif e want to allow them to access privete data member of class,We must make them friend
 #include<iostream>
