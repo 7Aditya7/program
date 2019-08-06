@@ -1,0 +1,31 @@
+//Exception Handling
+//-runtime errors/anomalies
+//-disturbs the normal flow of program execution---->Exception handling
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,x,div;
+    cout<<"Enter two numbers:"<<endl;
+    cin>>a>>b;
+    x=a-b;
+
+
+    try{
+
+    if(x!=0)
+    {
+        div=a/x;
+        cout<<"Result="<<div<<endl;
+    }
+    else
+    {
+        throw(x);
+    }
+    }
+    catch(int x)
+    {
+        cout<<"Exception occurred: DIVISION BY ZERO"<<endl;
+    }
+}
