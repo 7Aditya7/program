@@ -43,3 +43,35 @@ catch(char er)
 }
 cout<<"End of the program"<<endl;
 }
+
+//c
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    try{
+    throw 1;
+    }
+     catch(...)
+    {
+        cout<<"This is exceptions"<<endl;
+    }
+    try{
+
+    throw "aditya";
+    }
+     catch(...)
+    {
+        cout<<"This is exceptions"<<endl;
+    }
+    try{
+
+    throw 'A';
+    }
+    catch(...)
+    {
+        cout<<"This is exceptions"<<endl;
+    }
+}
+
