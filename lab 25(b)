@@ -1,0 +1,45 @@
+//lab 25(B) WAP to demonstrate multiple exception handling,
+//(c) WAP to show how all exceptions are caught in single catch block.
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+int A[5],n;
+cout<<"Enter five age valuer.."<<endl;
+for(int i=0;i<5;i++)
+{
+cin>>A[i];
+}
+try
+{
+for(int i=0;i<5;i++)
+{
+int x=A[i];
+if(x<0)
+{
+throw x;
+}
+}
+cout<<"Enter index of array:"<<endl;
+cin>>n;
+if(n<5)
+    {
+    cout<<A[n]<<endl;
+}
+else
+{
+ throw 'A';
+}
+}
+catch (int ex)
+{
+    cout<<"Exception1:Age is negative"<<endl;
+}
+catch(char er)
+{
+    cout<<"Exception2:Array index out of range"<<endl;
+}
+cout<<"End of the program"<<endl;
+}
