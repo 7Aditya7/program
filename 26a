@@ -1,0 +1,50 @@
+;wap to demonstrate functiontemplate in c++
+#include<iostream>
+using namespace std;
+template<class T>
+T bigger(T a,T b)
+{
+return(a>b)?a:b;
+
+}
+int main()
+{
+    int a,b;
+    float c,d;
+    char e,f;
+    cout<<"Enter two integer number"<<endl;
+    cin>>a>>b;
+    cout<<"Enter two float number"<<endl;
+    cin>>c>>d;
+    cout<<"Enter two character"<<endl;
+    cin>>e>>f;
+cout<<"Bigger "<<bigger(a,b)<<endl<<"Bigger "<<bigger(c,d)<<endl<<"Bigger "<<bigger(e,f);
+
+}
+
+
+
+//wap to demonstrate function template with multiple parameters.
+ #include<iostream>
+ using namespace std;
+class test{
+public:
+    template<typename T1,typename T2,typename T3>
+    void display(T1 a,T2 b,T3 c)// 3 different parameters
+    {
+        cout<<"T1 a="<<a<<endl;
+         cout<<"T1 b="<<b<<endl;
+          cout<<"T1 c="<<c<<endl;
+    }
+};
+int main()
+{
+    test t;
+    //function calls with three values of different data types
+    cout<<"First call"<<endl;
+    t.display('B',7.95,4);//char,float,int
+    cout<<"Second call"<<endl;
+    t.display(78.5,'M',6);//float,char,int
+    cout<<"Third call"<<endl;
+    t.display(35,80.34,'n');//int,float,char
+}
