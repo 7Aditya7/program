@@ -48,3 +48,82 @@ int main()
     cout<<"Third call"<<endl;
     t.display(35,80.34,'n');//int,float,char
 }
+
+/*
+lab 26(c) WAP to swap values using function template.
+   (d) WAP to demonstrate class templeate in c++;
+    (e) WAP to illustrate template and inheritance
+    (f)WAP to create the simple calculator with class template
+    */
+
+//calculator
+#include<iostream>
+using namespace std;
+template<class t>
+class test
+{
+t a,b;
+public:
+test (t x,t y)
+{
+a=x;
+b=y;
+}
+t smaller();
+};
+template<class t>
+t test<t>::smaller()
+{
+return(a<b)?a:b;
+}
+int main()
+{
+test <int>t1(3,5);
+cout<<t1.smaller();
+test<double> t2(3.5,3.7);
+cout<<t2.smaller():
+test <char> t3('A','R');
+cout<<t3.smaller();
+}
+
+
+//wap to demonstrate the inheritance int emplate class
+#include<iostream>
+using namespace std;
+template<class T>
+class First{
+protected:
+    T x,y;
+    void display()
+    {
+        cout<<x;
+    }
+
+};
+template <class S>
+class Second: public First<S>
+{
+    S z;
+public:
+    Second(S a,S b,S c)
+    {
+        First<S>::x=a;
+        First<S>::y=b;
+        z=c;
+    }
+    void show()
+    {
+        cout<<"x="<<First<S>::x<<"\t"<<"y="<<First<S>::y<<"\t"<<"z="<<z<<endl;
+    }
+};
+int main()
+{
+    Second <int>obs1(4,5,9);
+    Second <float>obs2(3.6,5.7,9.0);
+    Second <char>obs3('C','+','+');
+    obs1.show();
+
+    obs2.show();
+    obs3.show();
+    }
+
