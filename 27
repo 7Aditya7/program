@@ -1,0 +1,33 @@
+///wap to demonstrate pointer to base class.
+//-pointer of base class can contain the address of object of child class but vice versa is not possible.
+//b wap to demonstrate virutual funtion.
+//c wap to illustrate pure virtual function and abstract base class.
+
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+int b;
+void display()
+{
+cout<<"b="<<b<<"\n";
+}
+};
+class B: public A
+{
+
+};
+int main()
+{
+A *cp;
+A base;
+cp=&base;
+cp->b=100;
+B b;
+cout<<"cp points to the derived class \n";
+cp=&b;
+cp->b=150;
+//cp->d=300; not accessible
+cp->display();
+}
